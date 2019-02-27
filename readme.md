@@ -16,6 +16,8 @@
 
 [Project1-使用Flask完成微型博客系统.md](Project1.md) 
 
+[Django基础.md](django基础.md) 
+
 # 进阶
 
  [CSS进阶.md](CSS进阶.md) 
