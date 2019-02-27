@@ -1,0 +1,55 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 01</title>
+  </head>
+<body>
+    <div id="contain">
+        <input id="entry" value="">
+        <button id="submit-left"> 左侧入 </button>
+        <button id="submit-right"> 右侧入 </button>
+        <button id="submit-left-out"> 左侧出 </button>
+        <button id="submit-right-out"> 右侧出 </button>
+
+    </div>
+    <div id="data"></div>
+    <script>
+        let leftIn = document.querySelector('#submit-left');
+        let rightIn = document.querySelector('#submit-right');
+        let leftOut = document.querySelector("#submit-left-out");
+        let rightOut = document.querySelector("#submit-right-out");
+
+        function render(datas){
+            let data = document.querySelector("#data");
+            data.innerHTML = "";
+            datas.forEach((elem)=>{
+                let div = document.createElement('div');
+                div.innerText = elem;
+                data.appendChild(div);
+            })
+        }
+        let datas = []
+        leftIn.addEventListener('click',()=>{
+            let entry = document.querySelector("#entry").value;
+            datas.push(entry);
+            render(datas);
+        })
+        rightIn.addEventListener('click',()=>{
+            let entry = document.querySelector("#entry").value;
+            datas.unshift(entry);
+            render(datas);
+        })
+        leftOut.addEventListener('click',()=>{
+            let entry = document.querySelector("#entry").value;
+            datas.shift();
+            render(datas);
+        })
+        rightOut.addEventListener('click',()=>{
+            let entry = document.querySelector("#entry").value;
+            datas.pop();
+            render(datas);
+        })
+    </script>
+</body>
+</html>

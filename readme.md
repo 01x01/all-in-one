@@ -2,6 +2,8 @@
 
 [Web简介.md](web简介.md) 
 
+[Git操作.md](git操作.md) 
+
 [CSS基础.md](CSS基础.md) 
 
 [JavaScript基础.md](JavaScript基础.md) 
