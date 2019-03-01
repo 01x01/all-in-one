@@ -246,7 +246,19 @@ git reset 9e5e64a
 
 但是 working directory 没有
 
-所以这个时候，你要使用 `--hard `,这样一来，working directory 真正的销毁了，回退到了上一次的样子 
+所以这个时候，你要使用 `--hard `,这样一来，working directory 真正的销毁了，回退到了上一次的样子. 这样做是比较有风险的
+
+所以最好还是回退到上一版本即可，改动不变。
+但是如果你是有多个change， 不想一次全部恢复过来
+也可以恢复单独一个文件即可
+
+```
+git reset --mixed commit_id xxx.file 
+```
+
+最好的方式是： 每次 `git add ` 的时候同时通过 `git status `查看一下状态
+
 
 # 原文出自：
 http://www.ruanyifeng.com/blog/2014/06/git_remote.html
+https://git-scm.com/book/zh/v2
