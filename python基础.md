@@ -1,5 +1,33 @@
-# 概述
+* [概述](#概述)
+* [安装python](#安装python)
+* [设置pip源](#设置pip源)
+* [设置虚拟开发环境](#设置虚拟开发环境)
+    * [使用venv 模块](#使用venv-模块)
+    * [使用 pipenv 模块](#使用-pipenv-模块)
+* [list列表](#list列表)
+* [字典 dict](#字典-dict)
+    * [插入值](#插入值)
+    * [查找](#查找)
+    * [键值循环](#键值循环)
+    * [键循环](#键循环)
+    * [值循环](#值循环)
+    * [键值更新](#键值更新)
+* [函数](#函数)
+* [高阶函数](#高阶函数)
+    * [map](#map)
+    * [reduce](#reduce)
+    * [filter](#filter)
+    * [sorted](#sorted)
+* [匿名函数](#匿名函数)
+* [装饰器](#装饰器)
+* [面向对象](#面向对象)
+    * [声明对象](#声明对象)
+    * [访问限制](#访问限制)
+    * [继承](#继承)
+    * [使用<strong>slots</strong>](#使用slots)
+    * [@property](#property)
 
+# 概述
 Python是一门计算机程序设计的语言，语法优雅，是目前很火热的一门编程语言，
 
 其优点有：
@@ -28,7 +56,7 @@ $ exec "$SHELL"
 
 # 设置pip源
 
-python的官方源地址在国外，我们可以将地址设置为taobao源来加快我们下载第三方依赖包的速度。对于不同的操作系统，有不同的配置的地方：
+对于不同的操作系统，有不同的配置的地方：
 
 1. Windows 环境在 `C:\Users\<your-name>\pip` 新建pip.ini
 2. *unix 环境,  在`/Users/anonymous/.pip` 新建 pip.conf
@@ -63,7 +91,6 @@ source venv/bin/activate
 ## 使用 pipenv 模块
 
 ```ini
-操作：
 # 全局安装pipenv
 pip install pipenv 
 # 初始化项目
@@ -107,47 +134,47 @@ C:\Users\xxx\.virtualenvs\simpleDestops-YxQtYgkl
 # list列表
 
 ```python
-    classmate = ['johnw',"jack","tom","michael"]
-    # 弹出列表末尾元素: michael
-    p = classmate.pop() 
-    print("pop 返回： ",p)
-    print("pop 后列表为： ",classmate)
-    
-    # 末尾元素添加
-    p1 = classmate.append("mary")
-    print("append 返回: ",p1)
-    print("append 后列表为： ",classmate)
-    
-    # copy 列表
-    p3 = classmate.copy()
-    print("copy 返回: ",p3)
-    print("copy 后列表为： ",classmate)
-    
-    # count 返回列表某元素的个数
-    p4 = classmate.count('johnw')
-    print("count 返回: ",p4)
-    print("count 后列表为： ",classmate)
-    
-    # index 寻找元素的索引
-    p5 = classmate.index("jack",1)
-    print("index 返回: ",p5)
-    
-    # remove 元素
-    p6 = classmate.remove("johnw")
-    print("p6 返回： ",p6)
-    print("remove 后列表为： ",classmate)
-    
-    # reverse 和 sort
-    a1 = [2,3,51,4,6,2,7,8]
-    a1.sort()
-    print("sort 后 a1 为：",a1)
-    a1.reverse()
-    print("reverse 后 a1 为: ",a1)
-    
-    # 清除列表元素
-    p2 = classmate.clear()
-    print("clear 返回: ",p2)
-    print("clear 后列表为： ",classmate)
+classmate = ['johnw',"jack","tom","michael"]
+# 弹出列表末尾元素: michael
+p = classmate.pop() 
+print("pop 返回： ",p)
+print("pop 后列表为： ",classmate)
+
+# 末尾元素添加
+p1 = classmate.append("mary")
+print("append 返回: ",p1)
+print("append 后列表为： ",classmate)
+
+# copy 列表
+p3 = classmate.copy()
+print("copy 返回: ",p3)
+print("copy 后列表为： ",classmate)
+
+# count 返回列表某元素的个数
+p4 = classmate.count('johnw')
+print("count 返回: ",p4)
+print("count 后列表为： ",classmate)
+
+# index 寻找元素的索引
+p5 = classmate.index("jack",1)
+print("index 返回: ",p5)
+
+# remove 元素
+p6 = classmate.remove("johnw")
+print("p6 返回： ",p6)
+print("remove 后列表为： ",classmate)
+
+# reverse 和 sort
+a1 = [2,3,51,4,6,2,7,8]
+a1.sort()
+print("sort 后 a1 为：",a1)
+a1.reverse()
+print("reverse 后 a1 为: ",a1)
+
+# 清除列表元素
+p2 = classmate.clear()
+print("clear 返回: ",p2)
+print("clear 后列表为： ",classmate)
 ```
 
 # 字典 dict
